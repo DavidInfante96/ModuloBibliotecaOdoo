@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+  
+    <record id="barbershop_barber_tree" model="ir.ui.view">
+      <field name="name">barbershop.barber.tree</field>
+      <field name="model">barbershop.barber</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>         
+        </tree>
+      </field>
+    </record>
+
+    <record id="barbershop_barber_form" model="ir.ui.view">
+      <field name="name">barbershop.barber.form</field>
+      <field name="model">barbershop.barber</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="group_top">
+                    <group name="group_left">
+                        <field name="name"/>
+                    </group>
+                    <group name="group_right">
+                    </group>
+                </group>
+                <group name="group_bop">
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="barber_action_window">
+      <field name="name">Peluqueros</field>
+      <field name="res_model">barbershop.barber</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Peluquero
+          </p>
+          <p>
+              Click 'Crear' para añadir nuevos elementos.
+          </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>
