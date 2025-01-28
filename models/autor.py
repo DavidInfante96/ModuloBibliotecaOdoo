@@ -2,11 +2,11 @@ from odoo import models, fields, api
 
 
 class autor(models.Model):
-    _name = 'ModuloBibliotecaOdoo.autor'
-    _inherit = 'ModuloBibliotecaOdoo.persona'
-    _description = 'ModuloBibliotecaOdoo.autor'
+    _name = 'biblioteca.autor'
+    _inherit = 'biblioteca.persona'
+    _description = 'biblioteca.autor'
 
-    genero = fields.Many2one( comodel_name="ModuloBibliotecaOdoo.genero" string = "Genero", required = True )
+    genero = fields.Many2one( comodel_name="biblioteca.genero", string = "Genero", required = True )
  
 
     

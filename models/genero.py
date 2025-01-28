@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class Genero(models.Model):
-    _name = 'ModuloBibliotecaOdoo.genero'
+    _name = 'biblioteca.genero'
     _description = 'Genero'
 
     #id = fields.Char(string = "Id", required= True)

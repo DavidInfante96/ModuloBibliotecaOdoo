@@ -2,8 +2,8 @@ from odoo import models, fields, api
 
 
 class persona(models.AbstractModel):
-    _name = 'ModuloBibliotecaOdoo.persona'
-    _description = 'ModuloBibliotecaOdoo.persona'
+    _name = 'biblioteca.persona'
+    _description = 'biblioteca.persona'
 
     dni = fields.Char( string="DNI" )
     nombre = fields.Char( String="Nombre", required=True )
