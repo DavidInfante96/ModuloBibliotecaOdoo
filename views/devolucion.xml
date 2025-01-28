@@ -1,25 +1,32 @@
 <odoo>
   <data>
   
-    <record id="barbershop_barber_tree" model="ir.ui.view">
-      <field name="name">barbershop.barber.tree</field>
-      <field name="model">barbershop.barber</field>
+    <record id="biblioteca_devolucion_tree" model="ir.ui.view">
+      <field name="name">biblioteca.devolucion.tree</field>
+      <field name="model">biblioteca.devolucion</field>
       <field name="arch" type="xml">
         <tree>
-            <field name="name"/>         
+            <field name="fecha_devolucion"/>        
+            <field name="libro"/>     
+            <field name="persona"/>     
+            <field name="profesor"/>  
+
         </tree>
       </field>
     </record>
 
-    <record id="barbershop_barber_form" model="ir.ui.view">
-      <field name="name">barbershop.barber.form</field>
-      <field name="model">barbershop.barber</field>
+    <record id="biblioteca_devolucion_form" model="ir.ui.view">
+      <field name="name">biblioteca.devolucion.form</field>
+      <field name="model">biblioteca.devolucion</field>
       <field name="arch" type="xml">
         <form>
             <sheet>
                 <group name="group_top">
                     <group name="group_left">
-                        <field name="name"/>
+                       <field name="fecha_devolucion"/>        
+                        <field name="libro"/>     
+                        <field name="persona"/>     
+                        <field name="profesor"/> 
                     </group>
                     <group name="group_right">
                     </group>
@@ -31,9 +38,9 @@
       </field>
     </record>
 
-    <record model="ir.actions.act_window" id="barber_action_window">
+    <record model="ir.actions.act_window" id="devolucion_action_window">
       <field name="name">Peluqueros</field>
-      <field name="res_model">barbershop.barber</field>
+      <field name="res_model">biblioteca.devolucion</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_create">

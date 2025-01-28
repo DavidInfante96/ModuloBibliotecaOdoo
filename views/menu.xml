@@ -1,4 +1,4 @@
-<odoo>
+<!-- <odoo>
     <data>
         <menuitem id="menu_barbershop_lvl_1"
                   name="Peluquería"
@@ -27,4 +27,4 @@
                         sequence="2"
                         action="client_action_window"/>
     </data>
-</odoo>
+</odoo> -->

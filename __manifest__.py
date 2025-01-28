@@ -24,10 +24,8 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/client.xml',
-        'views/barber.xml',
-        'views/appointment.xml',
-        'views/menu.xml'
+        'views/devolucion.xml',
+        # 'views/menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
