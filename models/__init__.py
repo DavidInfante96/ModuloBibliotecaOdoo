@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models, barber, client, appointment
+from . import devolucion, libro,genero
