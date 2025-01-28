@@ -2,7 +2,7 @@ from odoo import models, fields
 
 class Libro(models.Model):
     _name = 'ModuloBibliotecaOdoo.libro'
-    _description = 'Libro'
+    _description = 'Libros'
 
     #id = fields.Char(string = "Id", required= True)
     titulo = fields.Char(string = "titulo", required= True )

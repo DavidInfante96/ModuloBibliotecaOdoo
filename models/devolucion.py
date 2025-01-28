@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class Devolucion(models.Model):
-    _name = 'ModuloBibliotecaOdoo.devoluciones'
+    _name = 'ModuloBibliotecaOdoo.devolucion'
     _description = 'Devoluciones'
 
     #id = fields.Char(string = "Id", required= True)

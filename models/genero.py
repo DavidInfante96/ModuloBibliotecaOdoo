@@ -1,8 +1,8 @@
 from odoo import models, fields
 
-class Libro(models.Model):
-    _name = 'ModuloBibliotecaOdoo.libro'
-    _description = 'Libro'
+class Genero(models.Model):
+    _name = 'ModuloBibliotecaOdoo.genero'
+    _description = 'Genero'
 
     #id = fields.Char(string = "Id", required= True)
     nombre = fields.Char(string = "titulo", required= True )
