@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class Barber(models.Model):
+class Devolucion(models.Model):
     _name = 'barbershop.barber'
     _description = 'barber'
 
