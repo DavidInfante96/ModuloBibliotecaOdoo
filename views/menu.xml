@@ -1,30 +1,17 @@
-<!-- <odoo>
+<odoo>
     <data>
-        <menuitem id="menu_barbershop_lvl_1"
-                  name="Peluquería"
+        <!-- Menú de Nivel 1 -->
+        <menuitem id="menu_biblioteca_level_1"
+                  name="Biblioteca"
+                  sequence="1"/> <!-- para que salga la PANTALLA INICIO-->
+
+        <!-- Menú de Nivel 2 -->
+        <menuitem id="menu_abogado_level_2"
+                  name="Gestión de devoluciones"
+                  parent="menu_biblioteca_level_1"
+                  action="devolucion_action_window"
                   sequence="1"/>
-            
-            <menuitem id="menu_appointment_lvl_2"
-                    name="Citas"
-                    parent="menu_barbershop_lvl_1"
-                    sequence="1"
-                    action="appointment_action_window"/>
-
-            <menuitem id="menu_barber_lvl_2"
-                    name="Peluqueros/Clientes"
-                    parent="menu_barbershop_lvl_1"
-                    sequence="2"/>
-
-                <menuitem id="menu_barber_lvl_3"
-                        name="Peluqueros"
-                        parent="menu_barber_lvl_2"
-                        sequence="1"
-                        action="barber_action_window"/>
-
-                <menuitem id="menu_client_lvl_3"
-                        name="Clientes"
-                        parent="menu_barber_lvl_2"
-                        sequence="2"
-                        action="client_action_window"/>
+        
+       
     </data>
-</odoo> -->
+</odoo>

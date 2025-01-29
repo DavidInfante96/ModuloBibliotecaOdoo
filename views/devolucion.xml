@@ -39,12 +39,12 @@
     </record>
 
     <record model="ir.actions.act_window" id="devolucion_action_window">
-      <field name="name">Peluqueros</field>
+      <field name="name">Devolucion</field>
       <field name="res_model">biblioteca.devolucion</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_create">
-              Peluquero
+              Devolucion
           </p>
           <p>
               Click 'Crear' para añadir nuevos elementos.

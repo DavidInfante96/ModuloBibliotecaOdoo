@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+  
+    <record id="biblioteca_autor_tree" model="ir.ui.view">
+      <field name="name">biblioteca.autor.tree</field>
+      <field name="model">biblioteca.autor</field>
+      <field name="arch" type="xml">
+        <tree>
+           <field name="dni"/>        
+           <field name="nombre"/>  
+           <field name="apellidos"/>    
+           <field name="genero"/>     
+
+        </tree>
+      </field>
+    </record>
+
+    <record id="biblioteca_autor_form" model="ir.ui.view">
+      <field name="name">biblioteca.autor.form</field>
+      <field name="model">biblioteca.autor</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="group_top">
+                    <group name="group_left">
+                       <field name="dni"/>        
+                       <field name="nombre"/>  
+                       <field name="apellidos"/>    
+                       <field name="genero"/>     
+                      
+                    </group>
+                    <group name="group_right">
+                    </group>
+                </group>
+                <group name="group_bop">
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="autor_action_window">
+      <field name="name">Autor</field>
+      <field name="res_model">biblioteca.autor</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Autor
+          </p>
+          <p>
+              Click 'Crear' para añadir nuevos elementos.
+          </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>
