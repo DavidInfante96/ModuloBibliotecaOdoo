@@ -1,9 +1,9 @@
 <odoo>
   <data>
   
-    <record id="biblioteca_usuario_tree" model="ir.ui.view">
-      <field name="name">biblioteca.usuario.tree</field>
-      <field name="model">biblioteca.usuario</field>
+    <record id="biblioteca_libro_tree" model="ir.ui.view">
+      <field name="name">biblioteca.libro.tree</field>
+      <field name="model">biblioteca.libro</field>
       <field name="arch" type="xml">
         <tree>
             <field name="titulo"/>        
@@ -14,9 +14,9 @@
       </field>
     </record>
 
-    <record id="biblioteca_usuario_form" model="ir.ui.view">
-      <field name="name">biblioteca.usuario.form</field>
-      <field name="model">biblioteca.usuario</field>
+    <record id="biblioteca_libro_form" model="ir.ui.view">
+      <field name="name">biblioteca.libro.form</field>
+      <field name="model">biblioteca.libro</field>
       <field name="arch" type="xml">
         <form>
             <sheet>
@@ -40,13 +40,13 @@
       </field>
     </record>
 
-    <record model="ir.actions.act_window" id="usuario_action_window">
-      <field name="name">Peluqueros</field>
-      <field name="res_model">biblioteca.usuario</field>
+    <record model="ir.actions.act_window" id="libro_action_window">
+      <field name="name">Libro</field>
+      <field name="res_model">biblioteca.libro</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_create">
-              Usuario
+              Libro
           </p>
           <p>
               Click 'Crear' para añadir nuevos elementos.

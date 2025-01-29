@@ -48,7 +48,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="usuario_action_window">
-      <field name="name">Peluqueros</field>
+      <field name="name">Usuario</field>
       <field name="res_model">biblioteca.usuario</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">

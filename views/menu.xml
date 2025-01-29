@@ -6,11 +6,56 @@
                   sequence="1"/> <!-- para que salga la PANTALLA INICIO-->
 
         <!-- Menú de Nivel 2 -->
-        <menuitem id="menu_abogado_level_2"
-                  name="Gestión de devoluciones"
+        <menuitem id="menu_biblioteca_level_2_gestion"
+                  name="Gestion"
                   parent="menu_biblioteca_level_1"
-                  action="devolucion_action_window"
                   sequence="1"/>
+
+            <!-- Menú de Nivel 3 -->
+            <menuitem id="menu_biblioteca_level_3_prestamos"
+                    name="Prestamos"
+                    parent="menu_biblioteca_level_2_gestion"
+                    action="prestamo_action_window"
+                    sequence="1"/>
+
+            <!-- Menú de Nivel 3 -->
+            <menuitem id="menu_biblioteca_level_3_devoluciones"
+                    name="Devoluciones"
+                    parent="menu_biblioteca_level_2_gestion"
+                    action="devolucion_action_window"
+                    sequence="2"/>
+
+            <!-- Menú de Nivel 3 -->
+            <menuitem id="menu_biblioteca_level_3_peticiones"
+                    name="Peticiones"
+                    parent="menu_biblioteca_level_2_gestion"
+                    action="peticion_action_window"
+                    sequence="3"/>
+        
+        <!-- Menú de Nivel 2 -->
+        <menuitem id="menu_biblioteca_level_2_libro"
+                  name="Libro"
+                  parent="menu_biblioteca_level_1"
+                  sequence="1"/>
+
+                  <menuitem id="menu_biblioteca_level_3_libro"
+                    name="Libro"
+                    parent="menu_biblioteca_level_2_libro"
+                    action="libro_action_window"
+                    sequence="1"/>
+
+                    <menuitem id="menu_biblioteca_level_3_autor"
+                    name="Autor"
+                    parent="menu_biblioteca_level_2_libro"
+                    action="autor_action_window"
+                    sequence="2"/>
+
+        <!-- Menú de Nivel 2 -->
+        <menuitem id="menu_biblioteca_level_2_usuario"
+                  name="Usuario"
+                  parent="menu_biblioteca_level_1"
+                  action="usuario_action_window"
+                  sequence="1"/>            
         
        
     </data>
