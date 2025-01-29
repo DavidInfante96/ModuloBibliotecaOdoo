@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <!-- Vista de Inicio -->
+        <record id="inicio_biblioteca_vista" model="ir.ui.view">
+            <field name="name">inicio.biblioteca.vista</field>
+            <field name="model">biblioteca.inicio</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1 style="text-align: center; margin-top: 50px; color: green;">MÓDULO DE BIBLIOTECAS</h1>
+                        <p style="margin-top: 20px; text-align: center; color: blue;">
+                            Bienvenido al módulo de gestión de bibliotecas. Aquí podrás gestionar todo tipo de libros.
+                        </p>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción de Inicio -->
+        <record id="action_inicio_biblioteca" model="ir.actions.act_window">
+            <field name="name">Inicio</field>
+            <field name="res_model">biblioteca.inicio</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="inicio_biblioteca_vista"/>
+        </record>
+    </data>
+</odoo>
