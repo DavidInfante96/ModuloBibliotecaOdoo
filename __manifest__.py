@@ -26,12 +26,11 @@
         # 'security/ir.model.access.csv',
         'views/prestamo.xml',
         'views/devolucion.xml',
-<<<<<<< HEAD
         'views/autor.xml',
-=======
+        'views/usuario.xml',
+        'views/libro.xml',
         'views/peticion.xml',
->>>>>>> 1b84d2f66a200abd786db230443cfaf490ffd3b5
-        # 'views/menu.xml'
+        'views/menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
