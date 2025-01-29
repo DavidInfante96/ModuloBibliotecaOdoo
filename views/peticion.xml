@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+  
+    <record id="biblioteca_peticion_tree" model="ir.ui.view">
+      <field name="name">biblioteca.peticion.tree</field>
+      <field name="model">biblioteca.peticion</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="usuario"/>
+            <field name="titulo"/>
+            <field name="nombre_autor"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="biblioteca_peticion_form" model="ir.ui.view">
+      <field name="name">biblioteca.peticion.form</field>
+      <field name="model">biblioteca.peticion</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="group_top">
+                    <group name="group_left">
+                      <field name="usuario"/>
+                      <field name="titulo"/>
+                      <field name="nombre_autor"/>
+                    </group>
+                    <group name="group_right">
+                    </group>
+                </group>
+                <group name="group_bop">
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="peticion_action_window">
+      <field name="name">Peticiones</field>
+      <field name="res_model">biblioteca.peticion</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Peticiones
+          </p>
+          <p>
+              Click 'Crear' para añadir nuevos elementos.
+          </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>

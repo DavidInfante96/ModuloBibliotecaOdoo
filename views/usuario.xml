@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+  
+    <record id="biblioteca_usuario_tree" model="ir.ui.view">
+      <field name="name">biblioteca.usuario.tree</field>
+      <field name="model">biblioteca.usuario</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="dni"/>        
+            <field name="nombre"/>     
+            <field name="apellidos"/>     
+            <field name="telefono"/>  
+            <field name="email"/>
+            <field name="es_profesor"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="biblioteca_usuario_form" model="ir.ui.view">
+      <field name="name">biblioteca.usuario.form</field>
+      <field name="model">biblioteca.usuario</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="group_top">
+                    <group name="group_left">
+                       <field name="dni"/>        
+                        <field name="nombre"/>     
+                        <field name="apellidos"/>    
+                    </group>
+                    <group name="group_right">
+                    </group>
+                </group>
+                <group name="group_bop" string="Contacto">    
+                    <group>
+                        <field name="telefono"/>  
+                    </group>
+                    <group>
+                        <field name="email"/>
+                    </group>
+                </group>
+                <!-- <group name="group_bottom" string="¿Es profesor?">
+                    <field name="es_profesor"/>
+                </group> -->
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="usuario_action_window">
+      <field name="name">Peluqueros</field>
+      <field name="res_model">biblioteca.usuario</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Usuario
+          </p>
+          <p>
+              Click 'Crear' para añadir nuevos elementos.
+          </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>

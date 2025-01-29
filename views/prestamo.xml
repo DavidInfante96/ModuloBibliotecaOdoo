@@ -1,0 +1,58 @@
+<odoo>
+  <data>
+  
+    <record id="biblioteca_prestamo_tree" model="ir.ui.view">
+      <field name="name">biblioteca.prestamo.tree</field>
+      <field name="model">biblioteca.prestamo</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="fecha_inicio"/>
+            <field name="fecha_fin"/>
+            <field name="libro"/>     
+            <field name="persona"/>     
+            <field name="profesor"/>  
+
+        </tree>
+      </field>
+    </record>
+
+    <record id="biblioteca_prestamo_form" model="ir.ui.view">
+      <field name="name">biblioteca.prestamo.form</field>
+      <field name="model">biblioteca.prestamo</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="group_top">
+                    <group name="group_left">
+                       <field name="fecha_inicio"/>
+                       <field name="fecha_fin"/>       
+                       <field name="libro"/>     
+                       <field name="persona"/>     
+                       <field name="profesor"/> 
+                    </group>
+                    <group name="group_right">
+                    </group>
+                </group>
+                <group name="group_bop">
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="prestamo_action_window">
+      <field name="name">Prestamo</field>
+      <field name="res_model">biblioteca.prestamo</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Prestamo
+          </p>
+          <p>
+              Click 'Crear' para añadir nuevos elementos.
+          </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>
