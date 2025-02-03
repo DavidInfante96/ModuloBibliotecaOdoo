@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class prestamo(models.Model):
+class Prestamo(models.Model):
     _name = 'biblioteca.prestamo'
     _description = 'biblioteca.prestamo'
 

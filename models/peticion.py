@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class usuario(models.Model):
+class Peticion(models.Model):
     _name = 'biblioteca.peticion'
     _description = 'biblioteca.usuario'
 

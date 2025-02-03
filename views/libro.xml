@@ -1,19 +1,23 @@
 <odoo>
   <data>
   
+   <!-- Vista de Árbol (Lista) -->
     <record id="biblioteca_libro_tree" model="ir.ui.view">
       <field name="name">biblioteca.libro.tree</field>
       <field name="model">biblioteca.libro</field>
       <field name="arch" type="xml">
         <tree>
-            <field name="titulo"/>        
+            <field name="name"/>        
             <field name="isbn"/>     
             <field name="genero"/>     
             <field name="autor"/>
+            <field name="imagen_image"/>
+       
         </tree>
       </field>
     </record>
 
+    <!-- Vista de Formulario -->
     <record id="biblioteca_libro_form" model="ir.ui.view">
       <field name="name">biblioteca.libro.form</field>
       <field name="model">biblioteca.libro</field>
@@ -21,15 +25,21 @@
         <form>
             <sheet>
             <div>
-                <h1><field class="oe_title" name="titulo"/></h1>
+                <h1>
+                   <field class="oe_title" name="name" placeholder="Titulo del Libro"/>
+                   <field class="oe_avatar" name="imagen_image" widget="image"/>
+                </h1>
+             
             </div>
-                <group name="group_top">
+                <group name="group_top" string="info libro" style="margin-top:20px">
                     <group name="group_left">
-                       <field name="isbn"/>        
-                        <field name="genero"/>  
+                       <field name="isbn"/>  
+                        <field name="autor"/>        
+                        <field name="genero"/>
+                 
                     </group>
                     <group name="group_right">
-                        <field name="autor"/>  
+                       
                     </group>
                 </group>
                 <!-- <group name="group_bottom" string="¿Es profesor?">
@@ -40,6 +50,7 @@
       </field>
     </record>
 
+    <!-- Acción para la vista -->
     <record model="ir.actions.act_window" id="libro_action_window">
       <field name="name">Libro</field>
       <field name="res_model">biblioteca.libro</field>

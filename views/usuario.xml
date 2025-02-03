@@ -7,9 +7,11 @@
       <field name="arch" type="xml">
         <tree>
             <field name="dni"/>        
-            <field name="nombre"/>     
+            <field name="name"/>     
             <field name="apellidos"/>     
             <field name="telefono"/>  
+            <field name="pais"/>
+            <field name="direccion"/>  
             <field name="email"/>
             <field name="es_profesor"/>
         </tree>
@@ -25,7 +27,7 @@
                 <group name="group_top">
                     <group name="group_left">
                        <field name="dni"/>        
-                        <field name="nombre"/>     
+                        <field name="name"/>     
                         <field name="apellidos"/>    
                     </group>
                     <group name="group_right">
@@ -33,15 +35,17 @@
                 </group>
                 <group name="group_bop" string="Contacto">    
                     <group>
+                        <field name="direccion"/>  
                         <field name="telefono"/>  
                     </group>
                     <group>
+                        <field name="pais"/>
                         <field name="email"/>
                     </group>
                 </group>
-                <!-- <group name="group_bottom" string="¿Es profesor?">
+                 <group name="group_bottom" string="¿Es profesor?">
                     <field name="es_profesor"/>
-                </group> -->
+                </group> 
             </sheet>
         </form>
       </field>
