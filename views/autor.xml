@@ -23,12 +23,12 @@
             <sheet>
                 <group name="group_top">
                     <group name="group_left">     
-                       <field name="name"/>  
-                       <field name="apellidos"/>    
+                       <field name="name"/>
                        <field name="genero"/>     
                       
                     </group>
                     <group name="group_right">
+                    <field name="apellidos"/> 
                     </group>
                 </group>
                 <group name="group_bop">
