@@ -24,13 +24,13 @@
       <field name="arch" type="xml">
         <form>
             <sheet>
-                <group name="group_top">
+                <group name="group_top" string="Información del alumno">
                     <group name="group_left">
-                       <field name="dni"/>        
                         <field name="name"/>     
-                        <field name="apellidos"/>    
+                       <field name="dni"/>        
                     </group>
                     <group name="group_right">
+                        <field name="apellidos"/>    
                     </group>
                 </group>
                 <group name="group_bop" string="Contacto">    
