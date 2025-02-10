@@ -25,15 +25,19 @@
                 <group name="group_top">
                     <group name="group_left">
                        <field name="fecha_inicio"/>
-                       <field name="fecha_fin"/>       
                        <field name="libro"/>     
-                       <field name="persona"/>     
-                       <field name="profesor"/> 
                     </group>
                     <group name="group_right">
+                       <field name="fecha_fin"/>       
                     </group>
                 </group>
-                <group name="group_bop">
+                <group name="group_bop" string="Usuarios relacionados" >
+                    <group name="group_right">
+                        <field name="persona"/>     
+                    </group>
+                    <group name="group_right">
+                        <field name="profesor"/> 
+                    </group>
                 </group>
             </sheet>
         </form>

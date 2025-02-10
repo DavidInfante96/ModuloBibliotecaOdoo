@@ -24,7 +24,7 @@
       <field name="arch" type="xml">
         <form>
             <sheet>
-                <group name="group_top" string="Información del alumno">
+                <group name="group_top" string="Información del usuario">
                     <group name="group_left">
                         <field name="name"/>     
                        <field name="dni"/>        
