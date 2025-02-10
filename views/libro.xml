@@ -9,6 +9,7 @@
         <tree>
             <field name="name"/>        
             <field name="isbn"/>     
+            <field name="cantidad"/>     
             <field name="genero"/>     
             <field name="autor"/>
             <field name="imagen_image"/>
@@ -33,13 +34,17 @@
             </div>
                 <group name="group_top" string="info libro" style="margin-top:20px">
                     <group name="group_left">
-                       <field name="isbn"/>  
-                        <field name="autor"/>        
+                        <field name="isbn"/>  
+                        <field name="autor">
+                            <tree editable="bottom">
+                                <field name="name" />
+                            </tree>
+                        </field>        
                         <field name="genero"/>
                  
                     </group>
                     <group name="group_right">
-                       
+                        <field name="cantidad"/>     
                     </group>
                 </group>
                 <!-- <group name="group_bottom" string="¿Es profesor?">
