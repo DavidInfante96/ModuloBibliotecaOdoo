@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class Peticion(models.Model):
@@ -7,6 +8,10 @@ class Peticion(models.Model):
 
     usuario = fields.Many2one( comodel_name = "biblioteca.usuario", string = "Usuario", required = True )
     titulo = fields.Char( string = "Titulo del libro", required = True )
-    nombre_autor = fields.Char( string = "Nombre autor", required = True )
+    nombre_autor = fields.Char( string = "Nombre autor" )
 
-    
+    @api.constrains( "titulo" )
+    def libro_existente( self ):
+        for record in self:
+            if self.env["biblioteca.libro"].search( [( 'name', '=', record.titulo)] ):
+                raise ValidationError( "El libro que pides ya existe en la biblioteca." )
