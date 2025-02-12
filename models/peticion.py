@@ -13,5 +13,5 @@ class Peticion(models.Model):
     @api.constrains( "titulo" )
     def libro_existente( self ):
         for record in self:
-            if self.env["biblioteca.libro"].search( [( 'name', '=', record.titulo)] ):
+            if self.env["biblioteca.libro"].search( [( 'name', 'ilike', record.titulo )] ).read( ["name"] ):
                 raise ValidationError( "El libro que pides ya existe en la biblioteca." )
