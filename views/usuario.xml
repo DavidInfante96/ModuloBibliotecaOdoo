@@ -33,19 +33,21 @@
                         <field name="apellidos"/>    
                     </group>
                 </group>
-                <group name="group_bop" string="Contacto">    
+                <notebook>
+                  <page string="Contacto">
                     <group>
-                        <field name="direccion"/>  
-                        <field name="telefono"/>  
+                      <field name="direccion"/>
+                      <field name="pais"/>
+                      <field name="telefono" widget="phone"/>
+                      <field name="email" widget="email"/>
                     </group>
+                  </page>
+                  <page string="¿Es Profesor?">
                     <group>
-                        <field name="pais"/>
-                        <field name="email"/>
+                      <field name="es_profesor"/>
                     </group>
-                </group>
-                 <group name="group_bottom" string="¿Es profesor?">
-                    <field name="es_profesor"/>
-                </group> 
+                  </page>
+                </notebook>
             </sheet>
         </form>
       </field>
