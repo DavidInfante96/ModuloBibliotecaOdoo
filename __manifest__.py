@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "biblioteca",
+    'name': "biblioteca", 
 
     'summary': """
         Permite gestionar una peluquería""",
