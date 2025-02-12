@@ -3,7 +3,7 @@
     'name': "biblioteca", 
 
     'summary': """
-        Permite gestionar una peluquería""",
+        Permite gestionar una biblioteca""",
 
     'description': """
         Long description of module's purpose
