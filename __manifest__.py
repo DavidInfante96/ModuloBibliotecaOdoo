@@ -31,6 +31,8 @@
         'views/usuario.xml',
         'views/libro.xml',
         'views/peticion.xml',
+        'views/genero.xml',
+        #'data/genero.csv',
         'views/menu.xml'
     ],
     # only loaded in demonstration mode

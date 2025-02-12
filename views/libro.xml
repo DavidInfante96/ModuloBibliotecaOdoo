@@ -40,7 +40,7 @@
                                 <field name="name" />
                             </tree>
                         </field>        
-                        <field name="genero"/>
+                        <field name="genero" widget="many2many_tags" options="{'color_field': 'color'}"/>
                  
                     </group>
                     <group name="group_right">

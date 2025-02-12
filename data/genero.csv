@@ -1,0 +1,31 @@
+id,name,color
+1,Aventura,2
+2,Ciencia Ficción,3
+3,Fantasía,4
+4,Misterio,5
+5,Romance,6
+6,Terror,7
+7,Histórico,8
+8,Poesía,9
+9,Biografía,10
+10,Infantil,11
+11,Drama,1
+12,Novela,3
+13,Thriller,2
+14,Policíaco,5
+15,Cómic,4
+16,Ensayo,6
+17,Literatura Clásica,10
+18,Suspense,11
+19,Distopía,7
+20,Viajes,8
+21,Mitología,9
+22,Autobiografía,2
+23,Realismo Mágico,3
+24,Fábula,5
+25,Cuento,1
+26,Aforismos,4
+27,Crónica,6
+28,Epístola,8
+29,Leyenda,9
+30,Parodia,10
