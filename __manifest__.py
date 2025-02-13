@@ -23,7 +23,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        #'security/ir.model.access.csv',
         'views/inicio.xml',
         'views/prestamo.xml',
         'views/devolucion.xml',
@@ -41,4 +41,11 @@
     'demo': [
         'demo/demo.xml',
     ],
+
+    'assets': {
+        'web.assets_backend': [
+            'biblioteca/static/src/css/tarjeta.css',
+        ],
+    },
+
 }

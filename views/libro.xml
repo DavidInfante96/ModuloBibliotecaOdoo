@@ -56,11 +56,53 @@
       </field>
     </record>
 
+    <record id="view_libro_kanban" model="ir.ui.view">
+      <field name="name">biblioteca.libro.kanban</field>
+      <field name="model">biblioteca.libro</field>
+      <field name="arch" type="xml">
+        <kanban>
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_global_click o_kanban_card">
+
+                        <!-- Text Section -->
+                        <div class="kanban-left">
+                            <h2 style="margin: 0; color: #333;">
+                                <field name="name"/>
+                            </h2>
+                            <p style="margin: 3px 0; color: black; font-size: 16px;">
+                                <strong>Autor:</strong> <field name="autor" />
+                            </p>
+                            <p style="margin: 3px 0; color: black; font-size: 14px;">
+                                <strong>ISBN:</strong> <field name="isbn" />
+                            </p>
+
+                            <!-- Types Section -->
+                            <div style="margin-top: 10px;">
+                                <span>
+                                    <field name="genero_html" widget="html"/>
+                                </span>
+
+                            </div>
+                      </div>
+
+                        <!-- Image Section -->
+                        <div class="kanban-right">
+                            <field name="imagen_image" widget="image"
+                                style="width: 120px; height: 120px;" />
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+      </field>
+    </record>
+
     <!-- Acción para la vista -->
     <record model="ir.actions.act_window" id="libro_action_window">
       <field name="name">Libro</field>
       <field name="res_model">biblioteca.libro</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_create">
               Libro

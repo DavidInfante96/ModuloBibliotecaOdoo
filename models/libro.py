@@ -23,15 +23,6 @@ class Libro(models.Model):
                 tags.append(f'<span style="background-color: {color}; color: white; padding: 5px; border-radius: 5px; margin-right: 5px;">{genero.name}</span>')
             record.genero_html = " ".join(tags)
 
-
-
-
-
-    # @api.depends('field1')
-    # def _compute_field2(self):
-    #     for record in self:
-    #         record.field2 =  True if record.field1 else False
-
     @api.constrains( "cantidad" )
     def _check_cantidad(self):
         for propertie in self:

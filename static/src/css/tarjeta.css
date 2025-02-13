@@ -1,0 +1,39 @@
+.o_kanban_card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .kanban_left {
+    flex: 1;
+  }
+  
+  .kanban_right {
+    flex-shrink: 0;
+    margin-left: 15px;
+  }
+  
+  .book_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .genre_tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  
