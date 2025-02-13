@@ -6,7 +6,7 @@ class autor(models.Model):
     _description = 'biblioteca.autor'
 
     name = fields.Char( string = "Nombre completo", required = True )
-    genero = fields.Many2one( comodel_name="biblioteca.genero", string = "Genero", required = True )
+    genero = fields.Many2many( comodel_name="biblioteca.genero", string = "Genero", required = True )
 
     genero_html = fields.Html(string="Género", compute="_compute_genero_html", sanitize=False)
 
@@ -14,7 +14,9 @@ class autor(models.Model):
     def _compute_genero_html(self):
         for record in self:
             if record.genero:
-                color = record.genero.color or "#000000"  # Usa el color hexadecimal del campo, o negro por defecto
-                record.genero_html = f'<span style="background-color: {color}; color: white; padding: 5px; border-radius: 5px; margin-right: 5px;">{record.genero.name}</span>'
+                record.genero_html = "".join([
+                    f'<span style="background-color: {genero.color or "#000000"}; color: white; padding: 3px 8px; border-radius: 5px; margin-right: 5px;">{genero.name}</span>'
+                    for genero in record.genero
+                ])
             else:
                 record.genero_html = ""
