@@ -8,7 +8,8 @@
         <tree>
             <field name="fecha_inicio"/>
             <field name="fecha_fin"/>
-            <field name="libro"/>     
+            <field name="libro"/>   
+            <field name="estado"/>  
             <field name="persona"/>     
             <field name="profesor"/>  
 
@@ -24,19 +25,20 @@
             <sheet>
                 <group name="group_top">
                     <group name="group_left">
-                       <field name="fecha_inicio"/>
-                       <field name="libro"/>     
+                      <field name="fecha_inicio"/>
+                      <field name="libro"/>
+                      <field name="estado" readonly="1"/>  
                     </group>
                     <group name="group_right">
-                       <field name="fecha_fin"/>       
+                      <field name="fecha_fin"/>       
                     </group>
                 </group>
                 <group name="group_bop" string="Usuarios relacionados" >
                     <group name="group_right">
-                        <field name="persona"/>     
+                        <field name="persona" domain="[('es_profesor', '=', False)]"/>     
                     </group>
                     <group name="group_right">
-                        <field name="profesor"/> 
+                        <field name="profesor" domain="[('es_profesor', '=', True)]"/> 
                     </group>
                 </group>
             </sheet>

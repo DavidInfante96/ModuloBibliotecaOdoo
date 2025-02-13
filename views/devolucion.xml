@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
         <tree>
             <field name="fecha_devolucion"/>        
-            <field name="libro"/>     
+            <field name="libros_nombres"/>
             <field name="persona"/>     
             <field name="profesor"/>  
 
@@ -23,14 +23,14 @@
             <sheet>
                 <group name="group_top">
                     <group name="group_left">
-                       <field name="fecha_devolucion"/>        
-                        <field name="libro"/>     
-                        <field name="persona"/>     
-                        <field name="profesor"/> 
+                      <field name="fecha_devolucion"/>
+                      <field name="persona" domain="[('es_profesor', '=', False)]"/>
+                      <field name="libro" widget="many2many_tags"/>
+                      <field name="profesor" domain="[('es_profesor', '=', True)]"/> 
                     </group>
-                    <group name="group_right">
+                <group name="group_right">
                     </group>
-                </group>
+                    </group>
                 <group name="group_bop">
                 </group>
             </sheet>
@@ -47,7 +47,7 @@
               Devolucion
           </p>
           <p>
-              Click 'Crear' para añadir nuevos elementos.
+              Click 'Crear' para registrar una nueva devolucion.
           </p>
       </field>
     </record>
