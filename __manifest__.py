@@ -31,6 +31,7 @@
         'views/usuario.xml',
         'views/qweb_templates.xml',
         'views/libro.xml',
+        'views/observacionPeticion.xml',
         'views/peticion.xml',
         'views/genero.xml',
         #'data/genero.csv',
