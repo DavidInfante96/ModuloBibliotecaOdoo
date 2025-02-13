@@ -26,7 +26,7 @@
                 <group name="group_top">
                     <group name="group_left">
                       <field name="fecha_inicio"/>
-                      <field name="libro"/>
+                      <field name="libro" domain="[('cantidad', '>', 0)]"/>
                       <field name="estado" readonly="1"/>  
                     </group>
                     <group name="group_right">

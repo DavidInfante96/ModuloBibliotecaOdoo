@@ -1,5 +1,4 @@
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError
 
 class Prestamo(models.Model):
     _name = 'biblioteca.prestamo'
@@ -17,6 +16,7 @@ class Prestamo(models.Model):
         ('devuelto', 'Devuelto')
     ], string='Estado', default='pendiente')
 
+
     @api.depends('libro', 'persona')
     def _compute_name(self):
         for record in self:
@@ -31,25 +31,7 @@ class Prestamo(models.Model):
         prestamo = super(Prestamo, self).create(vals)
         if prestamo.libro.cantidad <= 0:
             raise ValidationError(f"No hay existencias del libro '{prestamo.libro.name}' para hacer un préstamo.")
-        prestamo.libro.cantidad -= 1
+        prestamo.libro.cantidad -= 1  # Resta 1 a la cantidad del libro
         return prestamo
 
-
-    def devolver_libro(self):
-        for record in self:
-            if record.estado == 'pendiente':
-                record.libro.cantidad += 1  # Incrementamos la cantidad al devolver
-                record.estado = 'devuelto'
-            else:
-                raise ValidationError(f"El libro '{record.libro.name}' ya ha sido devuelto.")
-    
-    @api.constrains('libro')
-    def _check_libro_prestado(self):
-        for record in self:
-            prestamos_activos = self.search([
-                ('libro', '=', record.libro.id),
-                ('estado', '=', 'pendiente'),
-                ('id', '!=', record.id)
-            ])
-            if prestamos_activos:
-                raise ValidationError(f"El libro '{record.libro.name}' ya está prestado y no puede ser prestado nuevamente.")  
+     
