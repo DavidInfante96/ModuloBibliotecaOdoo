@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <record id="biblioteca_peticion_form_inherit" model="ir.ui.view">
+        <field name="name">biblioteca.peticion.form.inherit</field>
+        <field name="model">biblioteca.peticion</field>
+        <field name="inherit_id" ref="biblioteca_peticion_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+              <group>
+                  <field name="observacion"/>
+              </group>
+            </xpath>
+        </field>
+    </record>
+  </data>
+</odoo>
