@@ -24,9 +24,9 @@
                     <group name="group_left">     
 
                       <field name="name"/>
-                      <field name="genero"/>
-                      <field name="genero_html" widget="html" string="Género" readonly="1"/>
-                      
+                      <field name="genero" widget="many2many_tags" attrs="{'invisible': [('id', '!=', False)]}" />
+                      <field name="genero_html" widget="html" attrs="{'invisible': [('id', '=', False)]}" />
+
                     </group>
                     <group name="group_right">
                     </group>

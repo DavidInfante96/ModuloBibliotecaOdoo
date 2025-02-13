@@ -52,7 +52,9 @@ class Devolucion(models.Model):
             if prestamos:
                 # Aumenta la cantidad del libro devuelto
                 libro.cantidad += 1
-                # Cambia el estado del préstamo a devuelto
+                prestamos.write({
+                    'estado': 'devuelto',                         # Cambia el estado del préstamo a devuelto
+                    'fecha_fin': devolucion.fecha_devolucion})    # Actualiza la fecha de fin con la fecha de devolución
                 prestamos.write({'estado': 'devuelto'})
         return devolucion
 
