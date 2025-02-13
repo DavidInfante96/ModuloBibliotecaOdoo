@@ -88,7 +88,7 @@
 
                         <!-- Image Section -->
                         <div class="kanban-right">
-                            <field name="imagen_image" widget="image"
+                            <field name="imagen_image" class="kanban_image_card" widget="image"
                                 style="width: 120px; height: 120px;" />
                         </div>
                     </div>

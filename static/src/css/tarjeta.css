@@ -9,6 +9,10 @@
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
   }
+
+  .kanban_image_card img {
+    height: 120px;
+  }
   
   .kanban_left {
     flex: 1;
@@ -37,3 +41,11 @@
     margin-top: 5px;
   }
   
+  div[name="genero_html"] div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div[name="genero_html"] span {
+    margin-bottom: 5px;
+  }
