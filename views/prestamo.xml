@@ -35,7 +35,7 @@
                 </group>
                 <group name="group_bop" string="Usuarios relacionados" >
                     <group name="group_right">
-                        <field name="persona" domain="[('es_profesor', '=', False)]"/>     
+                        <field name="persona"/>     
                     </group>
                     <group name="group_right">
                         <field name="profesor" domain="[('es_profesor', '=', True)]"/> 

@@ -27,9 +27,9 @@ class Devolucion(models.Model):
         for record in self:
             record.libros_nombres = ", ".join(record.libro.mapped('name'))
 
-    @api.onchange('persona')
-    def _onchange_persona(self):
-        """Actualiza el dominio de los libros basándose en los préstamos del usuario seleccionado."""
+    @api.onchange('persona', 'libro')
+    def _onchange_persona_libro(self):
+        """Actualiza el dominio de los libros y usuarios dinámicamente según la selección."""
         if self.persona:
             prestamos = self.env['biblioteca.prestamo'].search([
                 ('persona', '=', self.persona.id),
@@ -37,8 +37,17 @@ class Devolucion(models.Model):
             ])
             libros_ids = prestamos.mapped('libro').ids
             return {'domain': {'libro': [('id', 'in', libros_ids)]}}
+
+        elif self.libro:
+            prestamos = self.env['biblioteca.prestamo'].search([
+                ('libro', 'in', self.libro.ids),
+                ('estado', '=', 'pendiente')
+            ])
+            personas_ids = prestamos.mapped('persona').ids
+            return {'domain': {'persona': [('id', 'in', personas_ids)]}}
+
         else:
-            return {'domain': {'libro': []}}
+            return {'domain': {'libro': [], 'persona': []}}
 
     @api.model
     def create(self, vals):
