@@ -6,9 +6,9 @@
       <field name="model">biblioteca.autor</field>
       <field name="arch" type="xml">
         <tree>
-     
-           <field name="name"/>  
-           <field name="genero"/>     
+
+          <field name="name"/>
+          <field name="genero_html" widget="html" string="Género"/>
 
         </tree>
       </field>
@@ -22,8 +22,9 @@
             <sheet>
                 <group name="group_top">
                     <group name="group_left">     
-                       <field name="name"/>
-                       <field name="genero"/>     
+
+                      <field name="name"/>
+                      <field name="genero_html" widget="html" string="Género"/>
                       
                     </group>
                     <group name="group_right">
