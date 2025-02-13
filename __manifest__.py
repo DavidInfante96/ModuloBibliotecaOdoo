@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'product'],
+    'depends': ['base', 'product', 'web'],
 
     # always loaded
     'data': [
@@ -29,6 +29,7 @@
         'views/devolucion.xml',
         'views/autor.xml',
         'views/usuario.xml',
+        'views/qweb_templates.xml',
         'views/libro.xml',
         'views/peticion.xml',
         'views/genero.xml',

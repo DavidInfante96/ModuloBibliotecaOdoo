@@ -10,7 +10,7 @@
             <field name="name"/>        
             <field name="isbn"/>     
             <field name="cantidad"/>     
-            <field name="genero"/>     
+            <field name="genero_html" widget="html"/>     
             <field name="autor"/>
             <field name="imagen_image"/>
        
@@ -40,7 +40,7 @@
                                 <field name="name" />
                             </tree>
                         </field>        
-                        <field name="genero" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                          <field name="genero_html" widget="html"/>     
                  
                     </group>
                     <group name="group_right">

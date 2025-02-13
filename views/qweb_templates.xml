@@ -1,0 +1,12 @@
+<odoo>
+  <data>
+    <template id="render_genero_tags">
+      <t t-foreach="record.genero" t-as="genero">
+        <span t-att-style="'background-color: #%s;' % genero.color"
+              class="badge badge-pill" style="color: white; margin-right: 5px; padding: 5px 10px;">
+          <t t-esc="genero.name"/>
+        </span>
+      </t>
+    </template>
+  </data>
+</odoo>

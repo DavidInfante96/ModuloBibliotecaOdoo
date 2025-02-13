@@ -12,6 +12,20 @@ class Libro(models.Model):
     imagen_image = fields.Image(string="Imagen Image")
     cantidad = fields.Integer( name = "Ejemplares", required = True )
 
+    genero_html = fields.Html(string="Género", compute="_compute_genero_html", sanitize=False)
+
+    @api.depends('genero')
+    def _compute_genero_html(self):
+        for record in self:
+            tags = []
+            for genero in record.genero:
+                color = genero.color or "#000000"  # Usa el color hexadecimal del campo, o negro por defecto
+                tags.append(f'<span style="background-color: {color}; color: white; padding: 5px; border-radius: 5px; margin-right: 5px;">{genero.name}</span>')
+            record.genero_html = " ".join(tags)
+
+
+
+
 
     # @api.depends('field1')
     # def _compute_field2(self):

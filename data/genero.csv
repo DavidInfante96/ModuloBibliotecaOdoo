@@ -1,31 +1,31 @@
 id,name,color
-1,Aventura,2
-2,Ciencia Ficción,3
-3,Fantasía,4
-4,Misterio,5
-5,Romance,6
-6,Terror,7
-7,Histórico,8
-8,Poesía,9
-9,Biografía,10
-10,Infantil,11
-11,Drama,1
-12,Novela,3
-13,Thriller,2
-14,Policíaco,5
-15,Cómic,4
-16,Ensayo,6
-17,Literatura Clásica,10
-18,Suspense,11
-19,Distopía,7
-20,Viajes,8
-21,Mitología,9
-22,Autobiografía,2
-23,Realismo Mágico,3
-24,Fábula,5
-25,Cuento,1
-26,Aforismos,4
-27,Crónica,6
-28,Epístola,8
-29,Leyenda,9
-30,Parodia,10
+1,Aventura,#FF5733
+2,Ciencia Ficción,#33FF57
+3,Fantasía,#3357FF
+4,Misterio,#F1C40F
+5,Romance,#9B59B6
+6,Terror,#1ABC9C
+7,Histórico,#E74C3C
+8,Poesía,#3498DB
+9,Biografía,#2ECC71
+10,Infantil,#E67E22
+11,Drama,#BDC3C7
+12,Novela,#FF5733
+13,Thriller,#33FF57
+14,Policíaco,#3357FF
+15,Cómic,#F1C40F
+16,Ensayo,#9B59B6
+17,Literatura Clásica,#1ABC9C
+18,Suspense,#E74C3C
+19,Distopía,#3498DB
+20,Viajes,#2ECC71
+21,Mitología,#E67E22
+22,Autobiografía,#BDC3C7
+23,Realismo Mágico,#FF5733
+24,Fábula,#33FF57
+25,Cuento,#3357FF
+26,Aforismos,#F1C40F
+27,Crónica,#9B59B6
+28,Epístola,#1ABC9C
+29,Leyenda,#E74C3C
+30,Parodia,#3498DB

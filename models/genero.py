@@ -6,4 +6,4 @@ class Genero(models.Model):
 
 
     name = fields.Char(string = "Nombre", required= True )
-    color = fields.Integer(string = "Color")
+    color = fields.Char(string = "Color")

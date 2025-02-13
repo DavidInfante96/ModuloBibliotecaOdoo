@@ -1,6 +1,5 @@
 from odoo import models, fields, api
 
-
 class Prestamo(models.Model):
     _name = 'biblioteca.prestamo'
     _description = 'biblioteca.prestamo'
